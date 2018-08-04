@@ -1,10 +1,10 @@
 'use strict';
 
-let lineCount: number = 7;
 
+let linesCount: number= 7
 let stars: number= -1;
 
-for ( let spaces: number= 3; spaces >= 0; spaces--) {
+for ( let spaces: number= linesCount; spaces >= 0; spaces--) {
     stars += 2;
     let row: string="";
 
@@ -20,7 +20,7 @@ for ( let spaces: number= 3; spaces >= 0; spaces--) {
 
 
 
-for ( let spaces2: number= 0; spaces2 <= lineCount; spaces2++ ) {
+for ( let spaces2: number= 0; spaces2 < linesCount; spaces2++ ) {
     stars -= 2;
     let row: string=" ";
 
