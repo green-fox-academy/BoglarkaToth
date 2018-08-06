@@ -3,7 +3,7 @@
 
 let baseNum: number= 123;
 
-function doubling (num) {
+function doubling (num: number) {
     return num * 2;
 }
 
