@@ -1,14 +1,17 @@
-'use string'
+'use strict'
 
+let maxNumber: number= 10;
 
-function sum (megadottszam: number){
+function sum (until: number){
     let summarize: number = 0;
-    for (let i: number = 0; i <= megadottszam; i++) {
-    summarize = summarize+i;
+    for (let i: number = 0; i <= until; i++) {
+    summarize = summarize + i;
     }
     return summarize;
 }
-console.log(sum(10));
+console.log(sum(maxNumber));
+
+
 // akkor kell, ha a 10et/számot/változót akarom változtatni,
 // ha maga a funkció logikája a lényeg, de más adatokkal akarom használni
 
