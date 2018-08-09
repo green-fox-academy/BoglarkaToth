@@ -1,6 +1,5 @@
 'use strict';
-// Write a program that draws a
-// pyramid like this:
+// Write a program that draws a pyramid like this:
 //
 //    *
 //   ***
@@ -24,6 +23,7 @@ for ( let spaces: number= 3; spaces >= 0; spaces--) {
     console.log(row);
 }
 
+// -------------------------------
 
 let lineNr: number = 4;
 

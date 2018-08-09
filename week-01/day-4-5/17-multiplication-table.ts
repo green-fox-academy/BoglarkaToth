@@ -1,15 +1,13 @@
 'use strict'
+export { }
+
+// Create a program that prints the multiplication table with number
 
 let number: number = 15;
-for ( let n3: number = 1 ; n3 < 11 ; n3++ ) {
-    
+for ( let n3: number = 1 ; n3 <= number ; n3++ ) {
     console.log ( n3 + " * " + number + " = " + (number * n3) );
 }
 
-
-// Create a program that
-// prints the multiplication table with number
-//
 // Example:
 // The number 15 should print:
 //

@@ -1,4 +1,7 @@
 'use srict'
+export { }
+
+// Write a program that draws a triangle like this:
 
 let lineCount: number = 10;
 
@@ -8,7 +11,13 @@ for (let c = 0; c < lineCount; c++) {
    console.log(line);
    }
 
-// Write a program that draws a triangle like this:
+// HA VáLTÓZÓ SOROKAT AKAROK?? 
+// consol.log foron kívül.. ? de a consolban a line van ....
+
+
+
+ 
+
 //
 // *
 // **

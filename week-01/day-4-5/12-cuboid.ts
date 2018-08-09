@@ -7,7 +7,7 @@ export {}
 // Surface Area: 600     
 // Volume: 1000
 
-let sideA: number= 10;   
+let sideA: number= 10;    // ha fix számokkal dolgozom (alább, ha többször használom a függvényt)
 let sideB: number= 20;      
 let sideC: number= 30;
 
@@ -26,7 +26,6 @@ function cuboidVolume () {
 console.log(cuboidVolume());
 
 
-
 /*
 function cuboidSurfaceArea (sideA: number, sideB: number, sideC: number) {  
     
@@ -35,4 +34,5 @@ function cuboidSurfaceArea (sideA: number, sideB: number, sideC: number) {
      
 }
 console.log(cuboidSurfaceArea(10, 20, 30));
+// ha több téglám van... ha mások is kell a függvény
 */
