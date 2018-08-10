@@ -34,5 +34,6 @@ function cuboidSurfaceArea (sideA: number, sideB: number, sideC: number) {
      
 }
 console.log(cuboidSurfaceArea(10, 20, 30));
+
 // ha több téglám van... ha mások is kell a függvény
 */

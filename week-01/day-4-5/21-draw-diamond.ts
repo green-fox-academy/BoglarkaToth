@@ -1,7 +1,38 @@
 'use strict';
+export { }
 
 
-let linesCount: number= 7
+let lineCount: number= 7
+
+
+let a: string = ' ';
+let b: string = '*';
+let c: string = '*';
+let d: string = '  ';
+
+for (let i: number = 0; i < lineCount/2; i++) {
+    for (let j: number = i; j < ((lineCount/2) -1); j++) {
+        a += ' ';
+    }
+    console.log( a + b );
+   
+    if (i == lineCount/2 - 1 && lineCount % 2 == 0) {
+        console.log(a + b);
+    }
+    b += '**';
+    a = ' ';
+}
+
+for (let k: number = lineCount/2 + 2; k < lineCount + 1; k++) {
+    for (let l: number = k ; l < lineCount; l++) {
+        c += '**';
+    }
+    console.log( d + c );
+    d += ' ';
+    c = '*';
+}
+
+/*
 let stars: number= -1;
 
 for ( let spaces: number= linesCount; spaces >= 0; spaces--) {
@@ -18,8 +49,6 @@ for ( let spaces: number= linesCount; spaces >= 0; spaces--) {
     console.log(row);
 }
 
-
-
 for ( let spaces2: number= 0; spaces2 < linesCount; spaces2++ ) {
     stars -= 2;
     let row: string=" ";
@@ -33,7 +62,7 @@ for ( let spaces2: number= 0; spaces2 < linesCount; spaces2++ ) {
     console.log(row);
 }
 
-
+*/
 
     // Write a program that draws a
 // diamond like this:

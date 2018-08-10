@@ -1,4 +1,5 @@
 'use strict';
+export { }
 
 //  Create a function that takes two strings as a parameter
 //  Returns the starting index where the second one is starting in the first one
