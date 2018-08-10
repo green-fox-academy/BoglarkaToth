@@ -1,4 +1,5 @@
 'use strict'
+export{}
 
 let name1: string= "Greenfox"
 

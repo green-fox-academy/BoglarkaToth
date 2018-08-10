@@ -1,4 +1,5 @@
 'use strict'
+export{}
 
 
 let factorialNum: number= 5;

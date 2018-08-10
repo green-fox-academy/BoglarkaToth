@@ -1,4 +1,5 @@
 'use strict'
+export{}
 
 
 let typo1: string= `Chinchill`;

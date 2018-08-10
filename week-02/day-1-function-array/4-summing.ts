@@ -1,4 +1,5 @@
 'use strict'
+export{}
 
 let maxNumber: number= 10;
 

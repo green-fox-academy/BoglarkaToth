@@ -1,4 +1,5 @@
 'use strict';
+export{}
 
 
 let baseNum: number= 123;
@@ -8,9 +9,6 @@ function doubling (num: number) {
 }
 
 console.log (doubling(baseNum));
-
-
-
 
 
 // -  Create a variable named `baseNum` and assign the value `123` to it

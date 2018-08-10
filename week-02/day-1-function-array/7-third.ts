@@ -1,1 +1,2 @@
 'use srtict'
+export{}

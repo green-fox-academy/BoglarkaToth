@@ -1,4 +1,5 @@
 'use strict';
+export{}
 
 // Modify this program to console.log Humpty Dumpty riddle correctly
 
