@@ -1,28 +1,26 @@
 'use strict'
 export{}
 
-
 let typo1: string= `Chinchill`;
-
 function appendAFunc1 (alm: string) {
-    let add: string= "a";
-    return alm.concat(add);
+    let add: string= "a";                   // plusz VÁLTÓZÓ hozzáadásával
+    return alm.concat(add);                 // CONCAT-tel végzi el a műveletet
 }
-
 console.log (appendAFunc1(typo1));
 
-
-//  ---------------
-
-
+//  -----------------------------------------
 
 let typo2: string= `Chinchill`;
-
 function appendAFunc2 (alm: string) {
-    return alm + "a";
+    return alm + "a";                       // RETURN-ben végzi el a műveletet
 }
-
 console.log (appendAFunc2(typo2));
+
+//  -----------------------------------------
+
+// ??????????   typeban a push number, nem string? typescriptben lehet-e pusholni stringbe?
+let typo3: string = 'Chinchill';
+console.log (typo3.push('a'));
 
 
 

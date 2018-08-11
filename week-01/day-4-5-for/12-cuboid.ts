@@ -7,23 +7,25 @@ export {}
 // Surface Area: 600     
 // Volume: 1000
 
-let sideA: number= 10;    // ha fix számokkal dolgozom (alább, ha többször használom a függvényt)
+// ha FIX számokkal dolgozom 
+// változó bent is lehet                       MIÉRT ?
+let sideA: number= 10;    
 let sideB: number= 20;      
 let sideC: number= 30;
-
-function cuboidSurfaceArea () {  
+function cuboidSurfaceArea1 () {  
     let result1: number= 2 * (sideA * sideB + sideA * sideC + sideB * sideC);
     return result1;     
 }
-console.log(cuboidSurfaceArea());
+console.log(cuboidSurfaceArea1());
 
+//  ----------------------------
 
-
-function cuboidVolume () {  
+// ha többször használom a függvényt
+function cuboidSurfaceArea3 () {  
     let result2: number= sideA * sideB * sideC;
     return result2;
 }
-console.log(cuboidVolume());
+console.log(cuboidSurfaceArea3());
 
 
 /*
