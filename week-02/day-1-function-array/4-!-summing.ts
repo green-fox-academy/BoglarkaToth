@@ -1,15 +1,22 @@
 'use strict'
 export{}
+// (hasonló 1/12-cuboid)
 
 
-// ??????? fznkió a feladat, de meg lehet így is oldani?
+// -  Write a function called `sum` that sum all the numbers until
+//the given parameter
+// -  The function should return the result
 
-let sum3: numbe [] = [1, 2, 3, 4, 5];
+
+
+//?? funkió a feladat, de meg lehet így is oldani?
+
+let sum3: number [] = [1, 2, 3, 4, 5];
 sum3.forEach(function summa(){
     console.log(summa);
 })
 
-// (hasonló 1/12-cuboid)
+// -------------------------------------------
 
 // ha FIX számmal használom
 // változók KINT is lehetnek
@@ -46,6 +53,3 @@ console.log(sum2(maxNumber2));
 
 
 
-// -  Write a function called `sum` that sum all the numbers until
-//the given parameter
-// -  The function should return the result

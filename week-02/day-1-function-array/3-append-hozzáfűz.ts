@@ -18,7 +18,8 @@ console.log (appendAFunc2(typo2));
 
 //  -----------------------------------------
 
-// ??????????   typeban a push number, nem string? typescriptben lehet-e pusholni stringbe?
+??
+//  typeban a push number, nem string? typescriptben lehet-e pusholni stringbe?
 let typo3: string = 'Chinchill';
 console.log (typo3.push('a'));
 
