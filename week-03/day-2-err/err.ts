@@ -1,11 +1,10 @@
-declare function require(path:string): any;
 'use srtict'
 export{}
-
-
+declare function require(path:string): any;
 const fs = require('fs');
-
 const charEncoding = 'utf-8';
+
+
 
 function readFromFile(fileName: string): string {
   try {

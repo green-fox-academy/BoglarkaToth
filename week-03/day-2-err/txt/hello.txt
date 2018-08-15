@@ -1,0 +1,10 @@
+arnika egy istenno
+mark egy isten
+A következőekben szeretném folytatni a JavaScript nyelv bemutatását, amit a függvényekkel kezdtem el.
+
+A további cikkekben szeretnék jobban elmélyedni olyan témákban, mint a
+
+funkcionális programozás,
+eseménykezelés,
+objektumok,
+valamint kitérni arra, hogyan változnak meg a fentiek az ECMAScript (ES) következő változataiban.

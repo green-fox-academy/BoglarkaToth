@@ -21,26 +21,23 @@ const writeToFile = (inputFile: string, content: string): void => { // content f
 console.log(writeToFile(fileName, myContent));
 
 // -----------------------------------------------------------------------------------
-/*
 
-const fileName: string = 'hello.txt';
+const fileName2: string = 'hello.txt';
 
 const readFromFile = (inputFile: string): string => { // 
   let content: string = null; // null = üres
   try {
-    content = fs.readFileSync(fileName, charsetEncoding); // fs.read.... file tartalmának olvasása
-    // a contetet töltse meg a fileName nevő file által muutattt tartalmábval
+    content = fs.readFileSync(fileName2, charsetEncoding); // fs.read.... file tartalmának olvasása
+    // a contetet töltse meg a fileName nevű file által mutatott file tartalmával
     return content; // ha sikerül, akkor return
   } catch (error) { // ha nem sikerült 
     console.log(error.message);  // az error legfelő sorát írja ki
     return null;
   }
 }
-console.log(readFromFile(fileName));
-*/
+console.log(readFromFile(fileName2));
 
 // -----------------------------------------------------------------------------------
-
 
 const isWriteable = (path: string): boolean => { // írható-e a file; path KÉSŐBB 
   try {
