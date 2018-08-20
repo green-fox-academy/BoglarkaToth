@@ -10,9 +10,9 @@ function sumNum(n: number): number {
   
   if (n < 10) {
    return n;  // utolsó kör
-  } else {    // n - utolsó kör
-
+  } else {    
+    return n % 10 + sumNum(Math.floor(n / 10))
   } 
 }
 
-console.log(sumNum(3));
+console.log(sumNum(12345));

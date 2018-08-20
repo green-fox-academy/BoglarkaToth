@@ -1,34 +1,16 @@
 'use srtict'
 export{}
 
-
-let kiscica: any = "kiscica";
-
-st.forEach()
-
-
-
-
-
-
-
-
-
-
 // Saturn is missing from the planetList
 // Insert it into the correct position
 // Create a function called putSaturn() which has list parameter and returns the correct list.
 // bonus for using some built in methods
-/*
+
 let planetList: string[] = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Uranus', 'Neptune'];
 // Expected output: "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus", "Neptune", "Saturn"
 
-function putSaturn ( newPl: string[]) {
-    planetList.push("Saturn");
-    return planetList;
+function putSaturn(newList: string[]): string[] {
+    planetList.push('Saturn');
+    return newList;
 }
-
 console.log(putSaturn(planetList));
-
-export = putSaturn;
-*/

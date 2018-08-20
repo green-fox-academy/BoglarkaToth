@@ -1,32 +1,30 @@
+'use srtict'
+export{}
+
 // Given base and n that are both 1 or more, compute recursively (no loops)
 // the value of base to the n power, so powerN(3, 2) is 9 (3 squared).
 
-// power(3,2) -> 3*3
-// power(4,3) -> 4*4*4 -> 4*power(4,2)
-// power(4,2) -> 4*4 -> 4*power(4,1)
-// power(4,1) -> 4 -> 4
-// 
+function powerN(base: number, exponent: number): number {
 
-// loop
-function power(base: number, exponent: number): number {
-  // let result: number = 1; // *nál 1el kezdünk, h ne 0vval szorozzunk, ne legyen 0 eredmény. +náál 0val kezdünk
-  fi ()
-  for (let i: number = 0; i < exponent ; i++) { // mivdel nem ivel szorunk ??
-    result *= base;
+  if (exponent === 1) {
+    return base
+  } else {
+    return base * powerN(base, exponent - 1);
   }
-
-    return result
-
 }
+console.log(powerN(2, 4));
 
-console.log(power(4,2));
-
-// recursive
-function powerNRecursive(base: number, exponent: number): number {
-  
-  
-  powerNRecursive()
-
+/*
+function power(base: number, exponent: number): number {
+  let result: number = 1;
+  for (let i: number = 0; i < exponent ; i++) { 
+    result *= base;   // result = result * base
+                      // 1) 1*2=2
+                      // 2) 2*2=4
+                      // 3) 4*2=8
+                      // 4) 8*2=16 és kilép
+  }
+  return result
 }
-
-console.log(powerNRecursive(4,2));
+console.log(power(2,4));
+*/
