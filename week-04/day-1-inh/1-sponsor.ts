@@ -22,7 +22,7 @@ export class Sponsor extends Person {
                 who represents ${this.company} and hired ${this.hiredStudents} students so far.`);
   }
   hire() {
-    console.log(1);
+    this.hiredStudents ++;
   }
   getGoal() {
     console.log("My goal is: Hire brilliant junior software developers.");

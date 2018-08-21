@@ -2,17 +2,13 @@
 
 import { Student } from "./1-student";
 import { Mentor } from "./1-mentor";
-/*
-methods:
-The Cohort class has the following constructors:
 
-*/
 export class Cohort {
   private name: string;
   private students: Student[];
   private mentors: Mentor[];
 
-  // ?? Cohort(name): beside the given parameter, it sets students and mentors as empty lists ? :
+  // ?? Cohort(name): beside the given parameter, it sets students and mentors as empty lists ? : GIVEN..SETS??
     constructor (name: string) {
     this.mentors = [];
     this.students = [];

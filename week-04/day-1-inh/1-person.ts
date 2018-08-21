@@ -4,7 +4,7 @@ export class Person {         // export
   protected name: string;     // protected -- globallá válik
   protected age: number;
   protected gender: string;
-  //Person(): sets name to Jane Doe, age to 30, gender to female:
+  //Person(): sets name to Jane Doe, age to 30, gender to female: SETS NAME??
   constructor (name: string = 'Jane Doe', age: number = 20, gender: string = 'female') {
               // default érték = alapébeégetett
             // ha pl name? akkor nem fog várni sehol értéket, üres marad a logolásnál

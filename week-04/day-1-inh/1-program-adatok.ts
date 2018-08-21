@@ -10,7 +10,7 @@ import { Cohort } from "./1-cohort";
 let people: Person[] = [];
 
 let mark: Person = new Person("Mark", 46, "male");
-people.push(mark);
+people.push(mark);                                      // people ??    .puch??
 
 let jane: Person = new Person();
 people.push(jane);
@@ -48,8 +48,8 @@ for (let person of people) {
   person.getGoal();
 }
 
-let awesome: Cohort= new Cohort("AWESOME");
-awesome.addStudent(student);
+let awesome: Cohort= new Cohort("AWESOME");   // ??
+awesome.addStudent(student);                  // add??
 awesome.addStudent(john);
 awesome.addMentor(mentor);
 awesome.addMentor(gandhi);

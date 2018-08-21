@@ -13,9 +13,10 @@ export class Student extends Person {
     // ezt kéri a feladat vagy ezt a constr mögé kell írnom??? :
     /*
     mit hova kel írni??
-    Student(name, age, gender, previousOrganization): beside the given parameters,
+    The Student class has the following constructors:
+    -Student(name, age, gender, previousOrganization): beside the given parameters,
     it sets skippedDays to 0
-    Student(): sets name to Jane Doe, age to 30, gender to female, previousOrganization to
+    -Student(): sets name to Jane Doe, age to 30, gender to female, previousOrganization to
     The School of Life, skippedDays to 0
     */
   }
@@ -27,7 +28,7 @@ export class Student extends Person {
             ${this.previousOrganization} who skipped ${this.skippedDays} days from the course already`);
   }
   skipDays(numberOfDays) {
-    console.log(this.skipDays += numberOfDays);
+    this.skipDays += numberOfDays;
   }
 }
 
