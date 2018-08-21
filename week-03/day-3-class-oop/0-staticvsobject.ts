@@ -4,6 +4,7 @@ export class Student {
   private age: number;
   private hasWeapon: boolean;
   private hasAlcohol: boolean;
+  
   constructor(name: string, age: number, hasWeapon: boolean, hasAlcohol: boolean ){
     this.name = name;
     this.age = age;

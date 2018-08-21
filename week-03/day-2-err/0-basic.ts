@@ -5,6 +5,24 @@ const fs = require('fs');
 const charsetEncoding: string = 'utf-8';
 
 // -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
+// GF
+function division(a: number, b: number): number {
+  if(b === 0) {
+    throw new TypeError('Cant divide by zero');
+  }
+  return a / b;
+}
+
+try {
+  console.log(division(1,0));
+} catch(err) {
+  console.log(err.message);
+} finally {
+  console.log('alma');
+}
+
+// -----------------------------------------------------------------------------------
 
 const fileName: string = 'my-text.txt';
 
@@ -53,3 +71,36 @@ if ( !isWriteable(fileName) ) { // ha isW.. nem teljesül a fileName függvénny
 } else { // ha pedig írható a fileNme
   writeToFile(fileName, 'viszlát Soma'); // akkor a fileName nevű file-ba írja bele...''
 }
+
+// -----------------------------------------------------------------------------------
+// GF 
+function readFromFile2(fileName: string): string {
+  try {
+    return fs.readFileSync2(fileName, charsetEncoding);
+  } catch (e) {
+    console.log(e.message);
+    return null;
+  }
+}
+
+function writeToAFile2(fileName: string, data: any): void {
+  fs.writeFileSyn2c(fileName, data);
+}
+
+function countChar2(char: string): number {
+  let result2: number = 0;
+  const fileContent2: string = readFromFile2('hello.txt');
+  if (fileContent2 !== null) {
+    fileContent2.split('\r\n').forEach(e => {
+      e.split('').forEach(elem => {
+        if(elem === char) {
+          result2 ++;
+        }
+      })
+    });
+    writeToAFile2('result.txt', result2);
+    return result2;
+  }
+}
+
+console.log(countChar2('a'));

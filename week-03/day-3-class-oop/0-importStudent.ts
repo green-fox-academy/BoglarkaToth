@@ -1,4 +1,4 @@
-import {Student, sayHaho } from "./staticvsobject";
+import {Student, sayHaho } from "./0-staticvsobject";
 
 let someoneElse: Student = new Student('Haho', 22, false, false);
 someoneElse.bringDollaz(500);
