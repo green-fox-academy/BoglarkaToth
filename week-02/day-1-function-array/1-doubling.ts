@@ -1,7 +1,6 @@
 'use strict';
 export{}
 
-
 let baseNum: number= 123;
 
 function doubling (num: number) {

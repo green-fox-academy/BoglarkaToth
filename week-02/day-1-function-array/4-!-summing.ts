@@ -2,12 +2,9 @@
 export{}
 // (hasonló 1/12-cuboid)
 
-
 // -  Write a function called `sum` that sum all the numbers until
 //the given parameter
 // -  The function should return the result
-
-
 
 //?? funkió a feladat, de meg lehet így is oldani?
 
@@ -22,7 +19,6 @@ sum3.forEach(function summa(){
 // változók KINT is lehetnek
 // --- akkor lehet kint, ha arra a számra még szüksége van
 // --- ha nincs rá szükségem később, akkor bent van, nem hívhatom/használhatom később
-
 // function + console 2. ZÁRÓJELE üres     mert az egész funkciót hívom meg
 // ( ezért kell a kövben a ()be írni a változót, mert azt változtatom )
 function sum1 (){
@@ -50,6 +46,3 @@ function sum2 (until: number){
     return summarize2;
 }
 console.log(sum2(maxNumber2));
-
-
-

@@ -18,6 +18,3 @@ let num = [7, 8, 9];
 num.forEach(function (value: number) {
   console.log(value);
 });
-
-
-
