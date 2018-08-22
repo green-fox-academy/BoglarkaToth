@@ -8,8 +8,6 @@ export class Aircrafts {
   
   constructor (types: any[], ammoStore: number, damage: number) {
     this.types = Aircrafts ??? [];
-    // gépeknek beégetet listát szeretnék. külön kellene,
-    //de itt hogy adom meg, ha mindet le akarom hívni?
     this.ammoStore = ammoStore;
     this.damage = damage;
   }
