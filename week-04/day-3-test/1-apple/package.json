@@ -1,0 +1,15 @@
+{
+  "name": "1-apple",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "tape": "^4.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
