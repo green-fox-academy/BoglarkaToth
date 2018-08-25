@@ -1,5 +1,5 @@
-'use strict'
-export{}
+'use strict';
+export{};
 
 let allTheNumbers: number[] = [];
  
