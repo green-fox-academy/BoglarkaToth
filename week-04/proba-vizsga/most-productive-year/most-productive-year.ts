@@ -6,8 +6,8 @@ const charsetEncoding: string = 'utf-8';
 
 
 function findMostProductiveYear (lookingFor: string): string {
-  const fileNameMarvel: string = '2-marvel.txt';
-  const fileNameParamount: string = '2-paramount.txt';
+  const fileNameMarvel: string = 'marvel.csv';
+  const fileNameParamount: string = 'paramount.csv';
   let fileName: string = '';
   if ( lookingFor === 'marvel') {
     fileName = fileNameMarvel;

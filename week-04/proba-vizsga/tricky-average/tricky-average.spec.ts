@@ -5,7 +5,7 @@ declare function require(path: string): any;
 const test = require('tape');
 
 import { test } from 'tape';
-import getTrickyAvg from './1-tricky-average';
+import getTrickyAvg from './tricky-average';
 
 
 test('your test case 1', (t) => {
