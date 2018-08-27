@@ -76,5 +76,5 @@ while(heroes.filter((hero: BaseHero) => hero.getMotivationLevel() > 0).length > 
       // * ???
   }); 
 }
-  
+
 heroes.forEach((hero: Hero) => console.log(hero.toString()));
