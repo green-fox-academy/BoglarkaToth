@@ -44,3 +44,10 @@ test((test) => {
   test.equal(numberToString(myNumber), 'three thousand nine hundred and eighty six');
   test.end();
 });
+
+test((test) => {
+  let myNumber: string = 'ten';
+  
+  test.equal(numberToString(myNumber), 'three thousand nine hundred and eighty six');
+  test.end();
+});
