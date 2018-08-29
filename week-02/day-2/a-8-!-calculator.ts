@@ -21,6 +21,8 @@ export{}
 
 const args = process.argv.splice(2); // Just a helper for you to get started
 
-
+function calculator(): {
+  
+}
 
 console.log('Input params are', args);

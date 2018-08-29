@@ -1,6 +1,6 @@
 'use srtict'
 
-import { Person } from "./1-person";
+import { Person } from "./person";
 
 export class Sponsor extends Person {
   private company: string;

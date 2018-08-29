@@ -1,8 +1,11 @@
 'use srtict'
-
-export class Aircrafts {
+/*
+There are 2 types of aircrafts: F16 and F35
+Both aircraft should track how many ammo it has
+*/
+export class Aircrafts {              // Create a class that represents an aircraft
   
-  protected types: [];
+  protected types: [];                
   protected ammoStore: number;
   protected damage: number;
   
@@ -13,26 +16,28 @@ export class Aircrafts {
   }
 
 
-  fight () {
+  fight(): number {
     return this.ammoStore = 0; 
     //It should use all the ammos (set it to 0) and it should return the damage it deals
       this.damage = ;
     //The damage is the multiplication of the base damage and the ammos
   }
-  refill () {
 
-  }
-  getType () {
-
-  }
-  getStatus () {
-
+  refill(): number {
+    return
   }
 
-  fiisPriorityght () {
+  getType(): string {
+    return
+  }
 
+  getStatus(): string {
+    return
+  }
+
+  isPriorityFill(): boolean {
+    return
   }
 }
 
 let f16: Aircrafts = new Aircrafts ("F16", 8 , 30);
-people.push(elon);

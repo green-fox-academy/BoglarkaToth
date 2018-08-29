@@ -6,33 +6,29 @@ export{}
 // The output should be: "Noooooo"
 
 const numbers: number[] = [1, 2, 3, 4, 5, 6, 8];
+// --------------------------------------------------------------------------
 
-function containsSeven(list: number[]) {
-  if ( list.indexOf(7) === -1 ) {         // mi a -1 ??
-    console.log('Noooo');
+function containsSeven1(number: number[]): string {
+  let returnString: string = '';
+  for (let element = 0; element < number.length; element++) {
+      if (numbers[element] === 7) {
+          returnString = 'Hoorray';
+      }
+      else if (numbers[element] !== 7) {
+          returnString = 'Noooooo';
+      }
+  }
+  return returnString;
+}
+console.log(containsSeven1(numbers));
+
+// --------------------------------------------------------------------------
+
+function containingSeven2 (input: any []) {
+  if (input.indexOf(7) === -1){
+      console.log('Noooooo');
   } else {
-    console.log('Hoorray');
+      console.log('Hooorray');
   }
 }
-containsSeven(numbers);
-
-
-// Do this again with a different solution using different list functions!
-
-// ???????????????
-
-//with the 'every' function
-function includingSeven (eachElement){
-  return eachElement !== 7;
-}
-console.log(numbers.every(includingSeven));
-
-
-//with the 'some' function
-let answer = function(element){
-  return element == 7;
-}
-console.log(numbers.some(answer));
-
-
-// console.log(containsSeven(numbers));   eredeti feladatban benne volt. melyik method kell ehhez??
+containingSeven2(numbers);

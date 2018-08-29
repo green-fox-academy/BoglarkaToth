@@ -20,8 +20,8 @@ let hashmap = {
 };
 
 for ( let i: number = 0; i < notSoCrypticMessage.length; i++) {
-    let decryptedMessage = notSoCrypticMessage[i];
-    out += hashmap[decryptedMessage];
+    out += hashmap[notSoCrypticMessage[i]];
+    // a hashmap i.gik elemét veszi elő
 }
 
 console.log(out);

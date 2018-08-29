@@ -1,7 +1,7 @@
 'use srtict'
 
-import { Student } from "./1-student";
-import { Mentor } from "./1-mentor";
+import { Student } from "./student";
+import { Mentor } from "./mentor";
 
 export class Cohort {
   private name: string;

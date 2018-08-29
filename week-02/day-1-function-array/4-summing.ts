@@ -1,12 +1,12 @@
 'use strict'
 export{}
-// (hasonló 1/12-cuboid)
+// (hasonló 1/4-5/12-cuboid)
 
 // -  Write a function called `sum` that sum all the numbers until
 //the given parameter
 // -  The function should return the result
 
-//?? funkió a feladat, de meg lehet így is oldani?
+//?? funkció a feladat, de meg lehet így is oldani?
 
 let sum3: number [] = [1, 2, 3, 4, 5];
 sum3.forEach(function summa(){

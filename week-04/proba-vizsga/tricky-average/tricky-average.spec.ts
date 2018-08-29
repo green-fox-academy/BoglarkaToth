@@ -9,7 +9,10 @@ import getTrickyAvg from './tricky-average';
 
 
 test('your test case 1', (t) => {
-  t.equal(getTrickyAvg([3, -1, 5, 8, 6]), 3.5);
+  let allTheNumbers: number[] = [3, -1, 5, 8, 6];
+  let expected: number = getTrickyAvg(allTheNumbers);
+
+  t.equal(3.5, expected);
   t.end();
 })
 
