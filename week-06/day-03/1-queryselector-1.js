@@ -29,4 +29,3 @@ for ( let i=0; i < conceitedKing.length; i++){
 
 let noBusiness = document.getElementsByTagName('div');
 console.log(noBusiness[0], noBusiness[1], noBusiness[2]);
-
