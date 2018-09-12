@@ -1,0 +1,47 @@
+DOM: The "DOM" is a tree structure that represents the HTML of the website, and every HTML element is a "node". Egy fastruktura ami egy HTML reszet reprezentalja egy websitenak. Javascriptben elerheto.
+-- window - A legfobb konyvtar. Innen erheto el minden az adott weblappal kapcsolatosan. (Root konyvtar)
+Pl: window.location.href mutat az mostani URL-re
+-- document - window-on belul, azokat az objecteket adja vissza ami lathato (le van renderelve). 
+-- node - Fingom sincs. Azt tudom hogy minden element egy node. De hogy kulon mi az a node...?
+-- element - Ez a DOM-ban a html element maga. Pl lehet egy <p> vagy hasonlo. DOM-ban letrehozhato,
+de magabol a HTML fajlbol is kiszedheto.
+-- accessing elements - DOM-ban van egy modszer hogy hogyan kell elerni elementeket egy HTML fajlbol.
+Meg arra is van hogy hogyan kell egyet csinalni.
+-- getElementsByClassName - A class property alapjan szedsz ki egy HTML elementet. Pl: html fajlban:
+<p class="hello">HELLOOOOO</p> javascript fajlban igy ered el: let hello = document.getElementsByClassName("hello");
+-- getElementById - Az id property alapjan szedsz ki egy elemet. Pl: html: <p id="bello">BELLOOOOO</p>
+javascript: let belloP = document.getElementById("bello");
+-- getElementsByTagName - Az element tipusa szerint szeded ki.
+Ez egy arrayt ad vissza mivel az osszes tag name-t kiszedi. Pl: html: <p>Valami</p><p>Barmi</p> javascript:
+let valami = document.getElementsByTagName("p"); valami => [0: p, 1:p];
+-- querySelector - Az e feletti cuccokat tudja. Pl. document.querySelector(".osztalyNev")
+osztaly nev alapjan szedi ki. document.querySelector("#idNev") id nev alapjan szedi ki.
+documnet.querySelector("p") az osszes p element kozul az elsot szedi ki. Aztan lehet varialni.
+Pl document.querySelector("p.osztalyNev") kiszedi azok a p-k kozul az az elemet amiben a class="osztalyNev"
+(es az elso p-t veszi ki);
+-- querySelectorAll - Ugyanaz mint a fenti, csak ha tobb elem van pl. uaz a tag name akkor arraybe rakja
+(mint a getElementsByTagName).
+
+-- createElement - let p = document.createElement("p") csinal egy p elementet (lesz egy <p></p>).
+p.innerHTML = "Hello" akkor ebbol lesz egy => <p>Hello</p>
+-- appendChild - appendChild-al tudod hozzaadni egy parenthez. Itt a parent szulo kapcsolat igy nez ki:
+<div class="parent"><div class="child">Hello</div></div> az a parent ami egyel magasabban van. Tehat hogy megcsinald az elobbi html kodot, letre kell hoznod 2 elementet. Tehat let parent = document.createElement("div"); parent.className = "parent"; let child = document.createElement("div"); child.className = "child"; child.innerHTML = "hello"; parent.appendChild(child) --> ez itt a lenyeg. Viszont ezt is hozza kell adni a bodyhoz hogy megjelenjen. Tehat. body.appendChild(parent);
+-- removeChild - kitorlod a gyereket. Elozo pelda alapjan parent.removeChild(child);
+-- insertBefore - egy child element ele beteszed az adott elementet. Olyan mint az appendChild
+(csak megmondhatod hova rakod). Pl:html: <ul id="myList"><li>Coffee</li><li>Tea</li></ul>
+javascript:var newItem = document.createElement("li"); newItem.innerHTML = "water";
+var list = document.getElementById("myList"); list.insertBefore(newItem, list.childNodes[0]);
+A Coffee ele rakja be a vizet
+-- innerHTML - az adott elementben levo HTML kod. Ide irhatsz szoveget, vagy uj taget is.
+-- innerText - adott elementben levo szoveg.
+-- textContent - adott elementben levo szoveg.
+
+-- getAttribute - html: <p class="classnev">FOS</p>
+javasript:let element = document.querySelector(".classnev"); element.getAttribute("class"); --> "classnev"
+-- setAttribute - element.setAttribute("class", "valamiSzar"); element.getAttribute("class"); --> "valamiSzar"
+-- style - a css-t hivod me ezzel. Ez utan johet minden ami a css-ben van. Pl. element.style.color = "red";
+-- style.display (explain more properties)
+-- className - element.className = "classNev"
+-- classList and methods:
+-- add - tobb classt tudsz hozzadni egy elementhez. element.classList.add("class1", "class2");
+-- remove - removolod a classnevet.

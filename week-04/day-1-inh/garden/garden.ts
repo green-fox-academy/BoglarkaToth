@@ -7,7 +7,7 @@ import { Tree } from "./tree";
 class Garden {
   plants: Plant[];
 
-  constructor() {
+  constructor() { // nemcsinál semmit, csak létrehoz
     this.plants = [];
   }
 
@@ -48,7 +48,7 @@ let blueFlower: Plant = new Flower('blue');
 let purpleTree: Plant = new Tree('purple');
 let orangeTree: Plant = new Tree('orange');
 
-myGarden.plants.push(yellowFlower, blueFlower, purpleTree, orangeTree);
+myGarden.plants.push(yellowFlower, blueFlower, purpleTree, orangeTree); // a myGarden plants-ébe pusholom bele a flowereket és a treeket
 myGarden.showGarden();
 myGarden.wateringAllPlants(40);
 myGarden.wateringAllPlants(70);
