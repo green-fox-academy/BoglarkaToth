@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Cocktails</title>                               <!-- index.js ből emeli át -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="index.js"></script>
+  <title>Cocktails</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="/assets/style.css" />
+  <!-- <script src="index.js"></script> -->
 </head>
+
 <body>
-  <h1> Cocktails <%= cocktails %> </h1>
+  <h1> Cocktails </h1>
+  <ul>
+    <%= cocktails.forEach(cocktailsName => { %>
+      <li>
+        <a href="/cocktails/<%= cocktailsName %>"><%= cocktailsName %></a>
+      </li>
+      <%= }) %>
+
+  </ul>
 </body>
+
 </html>
