@@ -1,0 +1,15 @@
+{
+  "name": "day-4-serv-temp",
+  "version": "1.0.0",
+  "description": "My first nodejs http server",
+  "main": "\u001b[D\u001b[D\u001b[Dindex\u001b[3~\u001b\u001b[3~ index\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
