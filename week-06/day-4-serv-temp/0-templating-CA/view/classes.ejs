@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>GreenFox Classes</title>
+  <link type="text/css" rel="stylesheet" href="/assets/style.css" />
+</head>
+
+<body>
+  <h1>Classes</h1>
+  <ul>
+    <% classes.forEach(classname => { %>
+      <li>
+        <a href="/classes/<%= classname %>"><%= classname %></a>
+      </li>
+      <% }) %>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= className %> profile page</title>
+    <script src="/assets/script.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/style.css"/>
+  </head>
+  <body>
+    <h1><%= className %></h1>
+    <button id="back-to-classes">Back to class list</button>
+    <a href="/classes/<%= className %>?sortby=asc">ASC order</a>
+    <a href="/classes/<%= className %>?sortby=desc">DESC order</a>
+    <ul class="student-list-container">
+      <% students.forEach(student => { %>
+        <li class="student-list-item">
+          <a href="https://github.com/<%= student.github %>" target="_blank">
+            <%= student.github %>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

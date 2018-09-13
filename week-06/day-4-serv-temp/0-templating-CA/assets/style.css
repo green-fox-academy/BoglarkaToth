@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: #dedede;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+#back-to-classes {
+  display: block;
+  padding: 10px;
+}
+
+.student-list-container {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.student-list-item a {
+  display: block;
+  padding: 10px 20px;
+  background-color: white;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
