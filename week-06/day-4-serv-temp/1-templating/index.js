@@ -10,6 +10,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   res.render('home', {     // views-on belüli home.ejs
+    //  render ?
     title: 'Home page',
     header: 'Green Fox Academy',
   });
