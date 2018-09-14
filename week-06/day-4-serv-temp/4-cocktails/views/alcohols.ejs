@@ -9,18 +9,21 @@
 </head>
 
 <body>
-
-  <h1>Alcohols</h1>
+  <h1>Cocktails</h1>
   <ul>
-    <% alcoholList.forEach(alcohols => { %>
+    <% alcoholList.forEach(alcohol => { %>
       <li>
-        <a href="/alcohols/<%= alcoholList %>"><%= alcohols %></a>
+        <a href="/alcohol/<%= alcoholList %>"><%= alcohol %></a>
       </li>
       <% }) %>
   </ul>
-
-
-
+  <ul>
+    <% cocktails.forEach(cocktail => { %>
+      <li>
+        <a href="/cocktail/<%= cocktails %>"><%= name %></a>
+      </li>
+      <% }) %>
+  </ul>
 </body>
 
 </html>

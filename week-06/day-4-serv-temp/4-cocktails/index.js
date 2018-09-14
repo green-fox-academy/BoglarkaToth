@@ -22,19 +22,23 @@ const cocktails = [
 app.get('/', (req, res) => {
   res.render('alcohols', {
     alcoholList,
-    name: cocktails.name,
-    contains: cocktails.contains,
-    price: cocktails.price,
-    // isAlcoholic: cocktails.isAlcoholic === 'true'
+    cocktails,
+    name: cocktails[0].name,
   });
 });
 
-app.get('/?alcohol={alcholType}', (req, res) => {
-  res.render('cocktails', {
-    className: req.query.cocktails,
-    cocktails,
-  });
-});
+
+// contains: cocktails[0].contains,
+//     price: cocktails.price,
+//     // isAlcoholic: cocktails.isAlcoholic === 'true'
+
+
+// app.get('/?alcohol={alcholType}', (req, res) => {
+//   res.render('cocktails', {
+//     className: req.query.cocktails,
+//     cocktail: ,
+//   });
+// });
 
 app.listen(PORT, () => {
   console.log(`The server is up and running on port ${PORT}`);
