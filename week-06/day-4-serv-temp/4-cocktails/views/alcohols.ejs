@@ -5,19 +5,22 @@
   <meta charset="utf-8" />
   <title>Cocktails</title>
   <link rel="stylesheet" type="text/css" media="screen" href="/assets/style.css" />
-  <!-- <script src="index.js"></script> -->
+  <script src="index.js"></script>
 </head>
 
 <body>
-  <h1> Cocktails </h1>
-  <ul>
-    <%= cocktails.forEach(cocktailsName => { %>
-      <li>
-        <a href="/cocktails/<%= cocktailsName %>"><%= cocktailsName %></a>
-      </li>
-      <%= }) %>
 
+  <h1>Alcohols</h1>
+  <ul>
+    <% alcoholList.forEach(alcohols => { %>
+      <li>
+        <a href="/alcohols/<%= alcoholList %>"><%= alcohols %></a>
+      </li>
+      <% }) %>
   </ul>
+
+
+
 </body>
 
 </html>

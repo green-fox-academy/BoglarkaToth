@@ -1,12 +1,14 @@
+
+
+
+
 'use strict';
 
 const express = require('express');
 const app = express();
 const PORT = 3004;
 app.set('view engine', 'ejs');
-app.use('/static', express.static('static'));
-
-const alcoholList = ['gin', 'vodka', 'rum', 'tequila'];
+app.use('/assets', express.static('assets'));
 
 const cocktails = [
   { name: 'GIN FIZZ', price: 1520, contains: ['gin', 'sugar', 'lemon juice', 'soda'], isAlcoholic: true },
@@ -18,23 +20,19 @@ const cocktails = [
   { name: 'VIRGIN MOJITO', price: 990, contains: ['sugar', 'lime juice', 'soda water'], isAlcoholic: false },
   { name: 'SAFE SEX ON THE BEACH', price: 990, contains: ['peach schnapps', 'orange juice', 'cranberry juice'], isAlcoholic: false },
 ];
+const alcoholList = ['gin', 'vodka', 'rum', 'tequila'];
 
 app.get('/', (req, res) => {
-  res.render('alcohols', {
+  res.render('alcoholList', {
     alcoholList,
-    name: cocktails.name,
-    contains: cocktails.contains,
-    price: cocktails.price,
-    // isAlcoholic: cocktails.isAlcoholic === 'true'
   });
 });
 
-app.get('/?alcohol={alcholType}', (req, res) => {
-  res.render('cocktails', {
-    className: req.query.cocktails,
-    cocktails,
-  });
-});
+// app.get('/:cocktails', (req, res) => {
+//   res.render('cocktails', {
+//     cocktails,
+//   });
+// });
 
 app.listen(PORT, () => {
   console.log(`The server is up and running on port ${PORT}`);
