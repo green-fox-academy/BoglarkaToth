@@ -5,22 +5,34 @@
   <meta charset="utf-8" />
   <title>Cocktails</title>
   <link rel="stylesheet" type="text/css" media="screen" href="/assets/style.css" />
-  <script src="index.js"></script>
+  <script src="index_JEGYZET.js"></script>
 </head>
 
 <body>
   <h1>Cocktails</h1>
   <ul>
-    <% alcoholList.forEach(alcohol => { %>
+    <li>
+      <a href="/">all</a>
+      <!-- ha az all-ra kattintok, a kezdőlapot hozza be = index.js-ben első get -->
+    </li>
+    <% alcoholList.forEach(elem => { %>
       <li>
-        <a href="/alcohol/<%= alcoholList %>"><%= alcohol %></a>
+        <a href="/?alcohol=<%= elem %>"><%= elem %></a>
+        <!--
+        /?alcohol => url-ben 
+        <%= alcoholList %>" => js-ből hozza url-be arr-nek elemeit
+        az 1. <%= elem %> => az arr elemeit írja ki az url-be,
+        a 2. <%= elem %> => az arr elemeit írja ki a tag közé
+        -->
       </li>
       <% }) %>
   </ul>
   <ul>
-    <% cocktails.forEach(cocktail => { %>
+    <% cocktailList.forEach(elem => { %>
       <li>
-        <a href="/cocktail/<%= cocktails %>"><%= name %></a>
+        <span><%= elem.name %></span>
+        <span><%= elem.price %></span>
+        <span><%= elem.contains %></span>
       </li>
       <% }) %>
   </ul>

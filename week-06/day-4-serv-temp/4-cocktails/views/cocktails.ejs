@@ -5,17 +5,17 @@
   <meta charset="utf-8" />
   <title>Cocktails</title>
   <link rel="stylesheet" type="text/css" media="screen" href="/assets/style.css" />
-  <script src="index.js"></script>
+  <script src="index_JEGYZET.js"></script>
 </head>
 
 <body>
-  <h1> <% = cocktails %></h1>
+  <h1> <%= cocktails %></h1>
   
   <ul class="cocktails-list-container">
-    <% cocktails.forEach(cocktail => { %>
+    <% cocktails.forEach(elem => { %>
       <li class="cocktails-list-item">
-        <a href="<%= cocktail.name %>" target="_blank">
-          <%= cocktail.name %>
+        <a href="<%= elem.name %>" target="_blank">
+          <%= elem.name %>
         </a>
       </li>
     <% }) %>
