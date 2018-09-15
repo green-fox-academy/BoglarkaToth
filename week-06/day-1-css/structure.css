@@ -1,0 +1,26 @@
+.container {
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The items should be fixed width and height: */
+
+.item {
+  align-self: flex-end;
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+}
+.item.green {
+  background-color:greenyellow;
+}
+.item.yellow {
+  background-color:yellow;
+}
+.item.purple {
+  background-color: fuchsia;
+}
+
