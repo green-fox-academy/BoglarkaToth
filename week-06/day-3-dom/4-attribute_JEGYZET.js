@@ -1,5 +1,7 @@
 // Write the image's url to the console.
-let imgSrc = document.querySelector('img');   // document.querySelector('img') => objectet ad vissza
+let imgSrc = document.querySelector('img');  
+// document.querySelector('img') => objectet ad vissza
+// ha ...('').valami => ez már stirng, mert ez már az object proberty-je
 console.log(imgSrc.src);
 
 //  ---------------------------------------------------------------------
