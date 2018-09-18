@@ -1,6 +1,9 @@
 'use strict';
 // import express:
 const express = require('express');
+// = const app = require('express')(); =>
+// => app.use... miatt KELL az express !!!
+
 // Do not forget to load the path module - const path = require('path');
 const path = require('path');
 // use express:
