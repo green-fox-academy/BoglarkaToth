@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-const PORT = 3004;
+const PORT = 8080;
 app.set('view engine', 'ejs');
 app.use('/static', express.static('static'));
 
@@ -20,20 +20,26 @@ const cocktailList = [
 ];
 
 //endpoint=
+// req = request
+// res = response
 app.get('/', (req, res) => {
-  // ha csak / jel van az url-ben, akkor bejön ide:
+  console.log('hello')
+
+  // ha csak / jel van az url-ben, akkor bejön ide
   // ha a / után ?alcohol=gin van, akkor is bejön
+  //  ? => req.query.
+  //  / => req.params.
   // viszont rossz url esetén nem jön (pl /akarmi/?alcohol=...)
   let alcoholType = req.query.alcohol; // jó url megadásához tartozik..
   // alcoholType = alcohols.ejs url-ből az "/?alcohol=" az elem-é fog kiértékelődni = ami az alcoholList-nek az elem-e
   // req.query = "?"" az url-ben
   // alcohol = a ? után jövő "alcohol=" az url-ben
 
-  // => egvan a jó url-ünk =>
+  // => megvan a jó url-ünk =>
 
   if (alcoholType) {
     // ez az if fogja eldönteni, h volt-e pl "/?alcohol=gin"
-    // vagy = else csak simán / volt
+    // (alább: vagy = else csak simán / volt)
     let elemArr = [];
     // ez lesz a cocktailList az alcohol.ejs-ben a megtalált alkoholra = pl "/?alcohol=gin"
     cocktailList.forEach((elem) => {
@@ -51,6 +57,7 @@ app.get('/', (req, res) => {
   } else {
     // vagy = else csak simán / volt
     res.render('alcohols', {      // alcohols.ejs-t hívja
+      // render templateből csinál html fájt
       alcoholList,
       cocktailList,
     });
