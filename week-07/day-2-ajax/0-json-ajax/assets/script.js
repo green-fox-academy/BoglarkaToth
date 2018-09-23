@@ -1,3 +1,4 @@
+// csak http-hez kell
 window.onload = () => {
   // szerver címe:
   const host = 'http://localhost:3000/api';
