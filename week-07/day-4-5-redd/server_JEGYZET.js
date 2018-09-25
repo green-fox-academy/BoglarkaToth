@@ -43,8 +43,13 @@ app.get('/posts', (req, res) => {
   conn.query('SELECT * FROM posts', (err, result) => {
     if (err) {
       console.log(err);
+      res.status(500).json({
+        message: 'An unexpected error happened'
+      })
     } else {
-      res.json(result);
+      res.json({
+        posts: result
+      });
     }
   })
 });
@@ -59,6 +64,9 @@ app.post('/posts', (req, res) => {
   conn.query('INSERT INTO posts (title, url, timestamp, score) VALUES (?, ?, ?, ?)', [data.title, data.url, 1494138425, 0], (err1, result1) => {
     if (err1) {
       console.log(err1);
+      res.status(500).json({
+        message: 'An unexpected error happened'
+      })
     } else {
       // mivel INSERT nem ad result-ot => result1 != "INSERT INTO posts (title, ur..." 
       // result1 helyett: 
@@ -66,6 +74,9 @@ app.post('/posts', (req, res) => {
       conn.query('SELECT * FROM posts WHERE title=?', [data.title], (err2, result2) => {
         if (err2) {
           console.log(err2);
+          res.status(500).json({
+            message: 'An unexpected error happened'
+          })
         } else {
           res.json(result2);
         }
@@ -80,6 +91,9 @@ app.put('/posts/:id/upvote', (req, res) => {
   conn.query('SELECT * FROM posts WHERE id=?', [id], (err1, result1) => {
     if (err1) {
       console.log(err1);
+      res.status(500).json({
+        message: 'An unexpected error happened'
+      })
     } else {
       // JSON.stringify => e nélkül RowDataPacket []-be pakol a SELECT ...  de mi ez?:)
       // console.log(JSON.stringify(result1));
@@ -92,6 +106,9 @@ app.put('/posts/:id/upvote', (req, res) => {
       conn.query('UPDATE posts SET score = ? WHERE id = ?', [score, id], (err2, result2) => {
         if (err2) {
           console.log(err2);
+          res.status(500).json({
+            message: 'An unexpected error happened'
+          })
         } else {
           // mivel UPDATE nem ad result-ot => result2 != "UPDATE posts SET scor..." 
           // result2 helyett: 
@@ -111,6 +128,9 @@ app.put('/posts/:id/downvote', (req, res) => {
   conn.query('SELECT * FROM posts WHERE id=?', [id], (err1, result1) => {
     if (err1) {
       console.log(err1);
+      res.status(500).json({
+        message: 'An unexpected error happened'
+      })
     } else {
       result1[0].score--;
       let score = result1[0].score;
@@ -131,6 +151,9 @@ app.delete('/posts/:id', (req, res) => {
   conn.query('SELECT * FROM posts WHERE id=?', [deleteId], (err1, result1) => {
     if (err1) {
       console.log(err1);
+      res.status(500).json({
+        message: 'An unexpected error happened'
+      })
     } else {
       conn.query('DELETE FROM posts WHERE id = ?', [deleteId], (err2, result2) => {
         if (err2) {
@@ -151,6 +174,9 @@ app.put('/posts/:id', (req, res) => {
   conn.query('SELECT * FROM posts WHERE id = ?', [dataPut], (err1, result1) => {
     if (err1) {
       console.log(err1);
+      res.status(500).json({
+        message: 'An unexpected error happened'
+      })
     } else {
       conn.query('UPDATE posts SET title = ?, url = ? WHERE id = ?', [data.title, data.url, dataPut], (err2, result2) => {
         if (err2) {
