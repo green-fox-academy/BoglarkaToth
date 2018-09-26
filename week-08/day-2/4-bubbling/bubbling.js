@@ -13,13 +13,13 @@ const myImg = document.querySelector('div');
 bubbling.addEventListener('click', (event) => {
   // dataset.direction == .html-ben data-direction
   if (event.target.dataset.direction === 'up') {
-    myImg.style.up -= "10px";
+    myImg.style.up -= "10";
   } else if (event.target.dataset.direction === 'down') {
-    myImg.style.down += "10px";
+    myImg.style.down += "10";
   } else if (event.target.dataset.direction === 'left') {
-    myImg.style.left -= "10px";
+    myImg.style.left -= "10";
   } else if (event.target.dataset.direction === 'right') {
-    myImg.style.right += "10px";
+    myImg.style.right += "10";
   }
 });
 
