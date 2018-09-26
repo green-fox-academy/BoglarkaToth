@@ -86,3 +86,7 @@ form.addEventListener('submit', (event) => {
 
   console.log(obj);
 });
+
+
+//ha ki akarom torolni
+click.removeEventListener('click', callback);
