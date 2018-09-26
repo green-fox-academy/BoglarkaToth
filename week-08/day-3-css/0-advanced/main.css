@@ -1,0 +1,72 @@
+* {
+  margin: 0 auto;
+}
+
+body {
+  background-color: rgb(54, 137, 233);
+  color: rgb(121, 137, 187);
+}
+
+.mertnagykepernyodvan {
+  visibility: hidden;
+  background-image: linear-gradient(66.6deg ,rgba(666, 666, 666, 0.666), rgba(60, 90, 61, 0.666));
+  width: 666px;
+  height: 666px;
+  box-shadow: 0 0 200px 200px royalblue;
+}
+
+table thead tr {
+  background-color: black;
+  color: aliceblue;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #dedede;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #bababa;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+  width: 500px;
+  height: 500px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+table td, table th {
+  border: 1px solid royalblue;
+}
+
+table tbody td[data-currency="$"]::before {
+ content: "$ ";
+}
+
+@media screen and (min-width: 1200px) {
+  body{
+    background: royalblue;
+  }
+
+  table {
+    color: royalblue;
+  }
+
+  table tbody tr td {
+    text-shadow: 5px 5px 5px royalblue;
+  }
+
+  .mertnagykepernyodvan {
+    visibility: visible;
+  }
+
+}
