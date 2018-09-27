@@ -1,0 +1,39 @@
+<!-- Create the above layout
+The first input field is focused, that's why it's border is green
+Add HTML5 form validation to all input fields -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Page Title</title>
+</head>
+
+<body>
+  <!-- https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/ui-development/tables-and-forms/workshop/login-form.md -->
+  <!-- így hivatkozhatok ajd a form divre a cssben? (lsd fenti link. szürke nagy háttér, fehér a formé) -->
+  <div id="form">
+    <form id="formHandler" action="http://localhost:3000/api/postElements" method="POST" enctype="application/json">
+      <p>ACCOUNT LOGIN</p>
+
+      <div>
+        <label for="name">USERNAME:</label>
+        <br>
+        <input required maxlength="15" type="text" id="name" name="user_name">
+      </div>
+
+      <div>
+        <label for="age">PASSWORD:</label>
+        <br>
+        <input type="number" id="age" name="user_age">
+      </div>
+      <br>
+
+      <button type="submit">Login</button>
+    </form>
+    <p id="response"></p>
+  </div>
+</body>
+
+</html>
