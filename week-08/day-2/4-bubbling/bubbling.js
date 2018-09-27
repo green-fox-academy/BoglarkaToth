@@ -14,6 +14,7 @@ bubbling.addEventListener('click', (event) => {
   // dataset.direction == .html-ben data-direction
   if (event.target.dataset.direction === 'up') {
     myImg.style.up -= "10";
+    console.log(myImg.style)
   } else if (event.target.dataset.direction === 'down') {
     myImg.style.down += "10";
   } else if (event.target.dataset.direction === 'left') {
