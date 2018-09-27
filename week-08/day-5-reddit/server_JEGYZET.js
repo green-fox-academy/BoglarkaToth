@@ -97,6 +97,15 @@ app.put('/posts/:id/upvote', (req, res) => {
     } else {
       // JSON.stringify => e nélkül RowDataPacket []-be pakol a SELECT ...  de mi ez?:)
       // console.log(JSON.stringify(result1));
+      // VAGY: Bence 8/2
+      // const { blur, change, focus, select } = event.target.elements; menőzés
+      // obj = {
+      //   blur: blur.value,
+      //   change: change.value,
+      //   focus: focus.value,
+      //   select: select.value,
+      // }
+
 
       // result1 []-t ad vissza => result1[0]
       // nekem csak a score kell, ezért beteszem egy változóba => .score

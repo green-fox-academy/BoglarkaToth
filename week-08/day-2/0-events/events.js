@@ -69,6 +69,7 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   // 1.
+  // blur, stb ezek a változó neve(i)
   const { blur, change, focus, select } = event.target.elements; menőzés
   obj = {
     blur: blur.value,
