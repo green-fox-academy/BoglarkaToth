@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="index.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="formHandler" action="http://localhost:3000/api/postElements" method="POST" enctype="application/json">
+    <div>
+      <label for="name">Name:</label>
+      <input required maxlength="15" type="text" id="name" name="user_name">
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="user_age">
+    </div>
+    <label for="gender">Gender:</label>
+    <select multiple="multiple" size="3" id="gender" name="user_gender">
+      <option value="male">MALE</option>
+      <option value="female">FEMALE</option>
+      <option value="non-binary">NON-BINARY</option>
+    </select>
+    <div>
+      <label for="fagyi">Fagyi:</label>
+      Yes
+      <input type="radio" id="fagyi" name="fagyi" value="yes">
+      No
+      <input type="radio" id="fagyi" name="fagyi" value="no">
+    </div>
+    <button type="submit">TESO PLZ WORK</button>
+  </form>
+  <p id="response"></p>
+</body>
+
+</html>
