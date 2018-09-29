@@ -70,7 +70,7 @@ form.addEventListener('submit', (event) => {
 
   // 1.
   // blur, stb ezek a változó neve(i)
-  const { blur, change, focus, select } = event.target.elements; menőzés
+  const { blur, change, focus, select } = event.target.elements;  // menőzés
   obj = {
     blur: blur.value,
     change: change.value,
