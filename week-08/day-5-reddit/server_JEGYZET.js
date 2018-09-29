@@ -55,7 +55,7 @@ app.get('/posts', (req, res) => {
 });
 
 app.post('/posts', (req, res) => {
-  // nem az url-ből jön az adat (params v query), hanem a body-ból = a felhasználódól kért adat (pl 'submit' gomb)
+  // nem az url-ből jön az adat (params v query), hanem a body-ból = a felhasználótól kért adat(pl 'submit' gomb)
   // belarakom egy változóba, mert még használni akarom..
   let data = req.body;
   // előbb létrehozom, aztán visszaüldöm =>
