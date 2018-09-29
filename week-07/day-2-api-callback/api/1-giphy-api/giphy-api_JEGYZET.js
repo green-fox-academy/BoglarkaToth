@@ -24,13 +24,42 @@ window.onload = () => {
       })
     });
 
+  // fetch(host)
+  //   .then((response) => {
+  //     return 'hello'
+  //   })
+  //   .then((hello) => {
+  //     return 'maki'
+  //   })
+  //   .then((maki) => {
+  //     console.log(maki)
+  //   });
+  // // =
+  // fetch(host)
+  //   .then((response) => ('hello'))
+  //   .then((hello) => ('maki'))
+  //   .then((maki) => { console.log(maki) });
+  // //=
+  // fetch(host)
+  //   .then((response) => ('hello'))            // response = data ! mindig data ....
+  //   .then((response) => ('maki'))             // response = hello
+  //   .then((response) => { console.log(maki) }); // response = maki
+
+
   // ------------ HTTP:
   const http = new XMLHttpRequest();
-
+  // http.open  = server.jd "app."
+  // ("GET"     = server.js ".get"
+  // host (vagy url) )      = server.js "/-valami-"
+  // true       = szinkorn v aszinkron ( nem muszáj kiírni, alapértelmezetten true)
   http.open('GET', host, true);
-
   http.onload = () => {
-    if (http.status === 200) {
+    // az if kezeli az adatot.. - egy callback függvény kezeli, h mi történjen az adatal ... 
+    // ha callback függvényt hazsnálok, akkor az if-et is függvénybe kell rakni, 
+    // mert így tudom meghívni az "adat (if)" függvényre a callback függvényt (alább PÉLDA)
+    if (http.status === 200) { // = ha az adat visszajött..
+      // .. akkor kezdjünk vele vmit:
+      // ez akár lehet ne egy callback függvény:
       const sanyi = JSON.parse(http.response);
       sanyi.data.forEach(elem => {
         let newImages = document.querySelector('.images');
@@ -41,27 +70,29 @@ window.onload = () => {
       })
     }
   }
-
   http.send();
 }
 
-// fetch(host)
-//   .then((response) => {
-//     return 'hello'
-//   })
-//   .then((hello) => {
-//     return 'maki'
-//   })
-//   .then((maki) => {
-//     console.log(maki)
-//   });
-// // =
-// fetch(host)
-//   .then((response) => ('hello'))
-//   .then((hello) => ('maki'))
-//   .then((maki) => { console.log(maki) });
-// //=
-// fetch(host)
-//   .then((response) => ('hello'))            // response = data ! mindig data ....
-//   .then((response) => ('maki'))             // response = hello
-//   .then((response) => { console.log(maki) }); // response = maki
+
+// PÉLDA- "adat (if)" függvény + callback függvény:
+// "adat(if)" függvény:
+function getData(url, callback) {
+  let http = new XMLHttpRequest();
+  http.open("GET", url);
+  http.onload = function () {
+    if (this.status == 200) {
+      callback(this.data);
+    }
+  };
+  http.send();
+}
+// callback függvény:
+function imTheCallback(data) {
+  data.forEach(element => {
+    console.log(element)
+  });
+}
+// server.js endpoint-ja:
+let url = "http://localhost:3000/communication";
+// itt hívom az adat-ra a callback-et:
+getData(url, imTheCallback);
