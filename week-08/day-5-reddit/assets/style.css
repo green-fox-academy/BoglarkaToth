@@ -5,3 +5,12 @@ body {
 .header {
   background-image: url("space.jpg");
 }
+
+.body-div{
+  border: solid 2px; 
+}
+
+.post-div{
+  border: solid 2px; 
+}
+
