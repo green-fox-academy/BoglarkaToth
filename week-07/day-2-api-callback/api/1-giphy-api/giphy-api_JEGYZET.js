@@ -59,8 +59,9 @@ window.onload = () => {
     // mert így tudom meghívni az "adat (if)" függvényre a callback függvényt (alább PÉLDA)
     if (http.status === 200) { // = ha az adat visszajött..
       // .. akkor kezdjünk vele vmit:
-      // ez akár lehet ne egy callback függvény:
+      // (JSNO.parse()) = a resp adatból MINDIG json formátumot kell csinálni
       const sanyi = JSON.parse(http.response);
+      // ez akár lehet ne egy callback függvény (alább külön van szedve a callback függvény)
       sanyi.data.forEach(elem => {
         let newImages = document.querySelector('.images');
         let newImg = document.createElement('img')
@@ -81,7 +82,8 @@ function getData(url, callback) {
   http.open("GET", url);
   http.onload = function () {
     if (this.status == 200) {
-      callback(this.data);
+      let dataFormServer = JSON.parse(this.data)
+      callback(dataFormServer);
     }
   };
   http.send();
