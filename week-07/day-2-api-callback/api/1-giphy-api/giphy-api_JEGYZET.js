@@ -80,6 +80,9 @@ window.onload = () => {
 function getData(url, callback) {
   let http = new XMLHttpRequest();
   http.open("GET", url);
+  // ha http.open("POST", url) akkor ezek is kellnek =>
+  // http.setRequestHeader('Accept', 'application/json');
+  // http.setRequestHeader("Content-Type", "application/json");
   http.onload = function () {
     if (this.status == 200) {
       let dataFormServer = JSON.parse(this.data)
@@ -87,6 +90,11 @@ function getData(url, callback) {
     }
   };
   http.send();
+  // ha http.open("POST", url) akkor ezek is kellnek =>
+  // http.send(JSON.stringify({
+  //   title: inputTitle.value,
+  //   url: inputUrl.value
+  // })
 }
 // callback függvény:
 function imTheCallback(data) {

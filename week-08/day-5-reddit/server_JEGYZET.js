@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/modify', (req, res) => {
+  res.sendFile(path.join(__dirname, './assets/modify.html'));
+});
+
 // mysql-be lép be = createConnection:
 const conn = mysql.createConnection({
   host: 'localhost',
