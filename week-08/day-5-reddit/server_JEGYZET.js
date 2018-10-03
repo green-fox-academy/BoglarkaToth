@@ -6,15 +6,17 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const PORT = 8080;
 const app = express();  // ezzel "use-olom" az express-t
-// const cors = require('cors');
+// const cors = require('cors');  // ?? titkosításhoz kell ??
 
 // app.use(cors());
 app.use('/assets', express.static('assets')); // a static fájlokat így húzom be.. = middleware
 // req.body hívásához kell (app.post-ban):
 app.use(bodyParser.json());
-// sima /-nél küldd el => 
-// __dirname-ből => (= adott mappa = day-4-5-redd)
-// csak az index.html fájl-t a frontend-re
+
+// sima / url-re küldi az index.html-t:
+//    sima /-nél küldd el => 
+//    __dirname-ből => (= adott mappa = day-4-5-redd)
+//    csak az index.html fájl-t a frontend-re
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -127,7 +129,7 @@ app.put('/posts/:id/upvote', (req, res) => {
           // result2 helyett: 
           // lehetne még egy SELECT, de egyszer már le van kérdezve, úh nem kell másik. DE =>
           // => az eső SELECT az UPDATE előtt van, tehát az a nem UPDATE-elt eredményt tárolja =>
-          // => a result1[0].score++ megnövel egyel a result1 csore értékét, viszont ez ne az adatbázisban növel, ezért kell az UPDATE
+          // => a result1[0].score++ megnövel egyel a result1 score értékét, viszont ez ne az adatbázisban növel, ezért kell az UPDATE
           // és így már az resut1 a megnövelt értéket tárolja, amit már vissza lehet itt adni:
           res.json(result1);
         }
@@ -160,7 +162,7 @@ app.put('/posts/:id/downvote', (req, res) => {
 
 app.delete('/posts/:id', (req, res) => {
   let deleteId = req.params.id;
-  // (csak azért kell SELECT, mert a feladat kéri vissza, h mit DELETE-elek, de e nélkül is lehet DELETE-elni:)
+  // (csak azért kell SELECT, mert a feladat kéri vissza a result-ot, h mit DELETE-elek, de e nélkül is lehet DELETE-elni: )
   conn.query('SELECT * FROM posts WHERE id=?', [deleteId], (err1, result1) => {
     if (err1) {
       console.log(err1);
@@ -180,22 +182,21 @@ app.delete('/posts/:id', (req, res) => {
 });
 
 app.put('/posts/:id', (req, res) => {
-  // url-ből az id:
-  let dataPut = req.params.id;
-  // bodyból a 'submit':
+  let modifyId = req.params.id;
+  // bodyból a modify-olt adatot:
   let data = req.body;
-  conn.query('SELECT * FROM posts WHERE id = ?', [dataPut], (err1, result1) => {
+  conn.query('SELECT * FROM posts WHERE id = ?', [modifyId], (err1, result1) => {
     if (err1) {
       console.log(err1);
       res.status(500).json({
         message: 'An unexpected error happened'
       })
     } else {
-      conn.query('UPDATE posts SET title = ?, url = ? WHERE id = ?', [data.title, data.url, dataPut], (err2, result2) => {
+      conn.query('UPDATE posts SET title = ?, url = ? WHERE id = ?', [data.title, data.url, modifyId], (err2, result2) => {
         if (err2) {
           console.log(err2);
         } else {
-          // (lehetne egy 2. SELECT => res.json(result3); VAGY: )
+          // (lehetne egy 2. SELECT => res.json(result3) : )
           // mivel UPDATE előtt result1 = [{
           //    "id": 3,
           //    "title": "Crockford",
@@ -203,15 +204,11 @@ app.put('/posts/:id', (req, res) => {
           //    "timestamp": 1494138425,
           //    "score": 1
           // }]
+          
+          // VAGY átírjuk a result1 értékeit: 
           result1[0].title = data.title;
           result1[0].url = data.url;
-          // itt már result1 = [{
-          //    "id": 3,
-          //    "title": "modified title",
-          //    "url": "http://facebook.com",
-          //    "timestamp": 1494138425,
-          //    "score": 1
-          // }]
+
           res.json(result1);
         }
       })
